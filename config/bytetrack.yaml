@@ -1,0 +1,24 @@
+# # Ultralytics YOLO 🚀, AGPL-3.0 license
+# # Default YOLO tracker settings for ByteTrack tracker https://github.com/ifzhang/ByteTrack
+
+# tracker_type: bytetrack # tracker type, ['botsort', 'bytetrack']
+# track_high_thresh: 0.25 # threshold for the first association
+# track_low_thresh: 0.1 # threshold for the second association
+# new_track_thresh: 0.25 # threshold for init new track if the detection does not match any tracks
+# track_buffer: 30 # buffer to calculate the time when to remove tracks
+# match_thresh: 0.8 # threshold for matching tracks
+# fuse_score: True # Whether to fuse confidence scores with the iou distances before matching
+# # min_box_area: 10  # threshold for min box areas(for tracker evaluation, not used for now)
+
+
+# Ultralytics YOLO 🚀, AGPL-3.0 license
+# Default YOLO tracker settings for ByteTrack tracker https://github.com/ifzhang/ByteTrack
+
+tracker_type: bytetrack # tracker type, ['botsort', 'bytetrack']
+track_high_thresh: 0.3 # threshold for the first association (조금 더 엄격하게)
+track_low_thresh: 0.15 # threshold for the second association (조금 더 느슨하게)
+new_track_thresh: 0.3 # threshold for init new track if the detection does not match any tracks (새로운 트랙을 시작하기 위한 임계값)
+track_buffer: 20 # buffer to calculate the time when to remove tracks (버퍼를 조금 더 작게 설정하여 실시간 성능 개선)
+match_thresh: 0.7 # threshold for matching tracks (매칭 임계값을 낮추어 빠른 트래킹)
+fuse_score: True # Whether to fuse confidence scores with the IOU distances before matching (IOU 거리와 신뢰도 점수를 융합하여 더 정확한 매칭)
+min_box_area: 100  # threshold for min box areas (객체의 최소 크기를 설정하여 너무 작은 객체가 추적되지 않도록 함)
